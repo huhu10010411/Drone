@@ -56,7 +56,11 @@ const osThreadAttr_t defaultTask_attributes = {
   .priority = (osPriority_t) osPriorityNormal,
 };
 /* USER CODE BEGIN PV */
-
+// canhanh: UART prinf
+int __io_putchar(int ch) {
+    UART_SendData((char*)&ch);
+    return ch;
+}
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
